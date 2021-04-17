@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    background: white;
+    text-align: center;
+    padding: 50px;
+}
+
+hr {
+    background: rgb(28, 101, 185);
+    border: none;
+    height: 20px;
+}
+
+.content {
+    margin: 25px 15px;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    vertical-align: middle;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.slika {
+    flex: 50px;
+}
+
+.slika img {
+    align-self: center;
+    margin-top: 5px;
+}
+
+.pitanje {
+    flex: 100%;
+    margin: 8px 0;
+}
+
+.odgovor {
+    margin-left: 50px;
+    display: none;
+}

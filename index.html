@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdn.sobekrepository.org/includes/jquery-rotate/2.2/jquery-rotate.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="head">
+        <h1 class="title">Zaštita potrošača</h1>
+    </header>
+    <hr>
+
+    <div class="content">
+        <div class="container" id="1">
+            <div class="slika">
+                <img src="arrow.png" alt="-">
+            </div>
+            <div class="pitanje">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla ipsum laudantium dolorem reprehenderit?</p>
+            </div>
+        </div>
+        <div class="odgovor" id="1">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, possimus quis! Explicabo ab aperiam similique laborum deleniti temporibus neque facere. Neque quibusdam molestiae voluptatem aut.</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container" id="2">
+            <div class="slika">
+                <img src="arrow.png" alt="-">
+            </div>
+            <div class="pitanje">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla ipsum laudantium dolorem reprehenderit?</p>
+            </div>
+        </div>
+        <div class="odgovor" id="2">
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, possimus quis! Explicabo ab aperiam similique
+                laborum deleniti temporibus neque facere. Neque quibusdam molestiae voluptatem aut.</span>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var rotation = [0, 0, 0];
+            $(".container").click(function(){ 
+                var str = $(this).attr("id");
+                console.log(str);
+                $("#" + str + ".odgovor").toggle(300);
+                rotation[parseInt(str)] += 180;
+                $("#" + str + ".container img").rotate(rotation[parseInt(str)]);
+            })
+        })
+    </script>
+</body>
+</html>
