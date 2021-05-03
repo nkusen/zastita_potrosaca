@@ -21,11 +21,12 @@
                 <img src="arrow.png" alt="-">
             </div>
             <div class="pitanje">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla ipsum laudantium dolorem reprehenderit?</p>
+                <p>Koje su obveze trgovca ako prodaje proizvod s greškom?</p>
             </div>
         </div>
         <div class="odgovor" id="1">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, possimus quis! Explicabo ab aperiam similique laborum deleniti temporibus neque facere. Neque quibusdam molestiae voluptatem aut.</span>
+            <span>Ako trgovac prodaje proizvod koji ima grešku, mora jasno, vidljivo i čitljivo označiti na proizvodu ili na prodajnome
+            mjestu da je riječ o prodaji proizvoda s greškom te upoznati potrošača s tim o kakvoj je greški na proizvodu riječ.</span>
         </div>
     </div>
 
@@ -35,12 +36,55 @@
                 <img src="arrow.png" alt="-">
             </div>
             <div class="pitanje">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla ipsum laudantium dolorem reprehenderit?</p>
+                <p>Kako mora biti označen proizvod kojem istječe rok uporabe?</p>
             </div>
         </div>
         <div class="odgovor" id="2">
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, possimus quis! Explicabo ab aperiam similique
-                laborum deleniti temporibus neque facere. Neque quibusdam molestiae voluptatem aut.</span>
+            <span>Proizvod koji se prodaje po nižoj cijeni od cijene u redovnoj prodaji jer mu istječe rok uporabe mora imati dodatno
+            jasno, vidljivo i čitljivo istaknut krajnji rok uporabe.</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container" id="3">
+            <div class="slika">
+                <img src="arrow.png" alt="-">
+            </div>
+            <div class="pitanje">
+                <p>Što je rasprodaja?</p>
+            </div>
+        </div>
+        <div class="odgovor" id="3">
+            <span>Rasprodaja je prodaja proizvoda po nižoj cijeni koje se provodi u slučaju:
+            <br>
+            – prestanka poslovanja trgovca
+            <br>
+            – prestanka poslovanja u dosadašnjim poslovnim prostorijama
+            <br>
+            – prestanka prodaje određenog proizvoda iz predmeta poslovanja trgovca
+            <br>
+            – kada je poslovanje trgovca ozbiljno ugroženo
+            <br>
+            – obavljanja složenijih građevinskih radova unutar ili na poslovnim prostorijama</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container" id="4">
+            <div class="slika">
+                <img src="arrow.png" alt="-">
+            </div>
+            <div class="pitanje">
+                <p>Koje su nove obveze trgovaca u vezi s podnošenjem pisanog prigovora potrošača?</p>
+            </div>
+        </div>
+        <div class="odgovor" id="4">
+            <span>Trgovac je dužan omogućiti potrošaču podnošenje pisanog prigovora u svojim poslovnim prostorijama i bez odgađanja
+            pisanim putem potvrditi njegov primitak kao i podnošenje pisanog prigovora putem pošte, telefaksa ili elektroničke
+            pošte. Trgovac je dužan u poslovnim prostorijama vidljivo istaknuti obavijest o načinu podnošenja pisanog prigovora.
+            Trgovac koji pruža javnu uslugu dužan je na ispostavljenom računu vidljivo istaknuti obavijest o načinu podnošenja
+            pisanog prigovora. Trgovac je dužan u pisanom obliku odgovoriti na pisani prigovor u roku od 15 dana od dana
+            zaprimljenog prigovora.</span>
         </div>
     </div>
 
@@ -52,7 +96,9 @@
                 console.log(str);
                 $("#" + str + ".odgovor").toggle(300);
                 rotation[parseInt(str)] += 180;
-                $("#" + str + ".container img").rotate(rotation[parseInt(str)]);
+                $("#" + str + ".container img").rotate({angle: (rotation[parseInt(str)] - 180) % 360, 
+                                                        animateTo: rotation[parseInt(str)] % 360, 
+                                                        duration: 200});
             })
         })
     </script>
